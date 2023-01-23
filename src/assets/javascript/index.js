@@ -12,10 +12,16 @@ const codificador = {
             }
             textoCodificado += letra;
         }
-        return (textoCodificado);
+        return textoCodificado;
     },
     decodifica: function (texto) {
-
+        let textoDecodificado = texto;
+        for (let i = 0; i < this.chaveDecodificadora.length; i++) {
+            const elemento = this.chaveDecodificadora[i];
+            while (textoDecodificado.includes(elemento)) {
+                textoDecodificado = textoDecodificado.replace(elemento, this.chaveCodificadora[i]);
+            }
+        }
+        return textoDecodificado;
     }
 }
-codificador.codifica('aeiouaeiout');
