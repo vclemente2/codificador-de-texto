@@ -8,15 +8,52 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="./assets/javascript/index.js"></script>
+    <script src="./assets/javascript/script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1><img src="./assets/imagens/logo.svg"></h1>
+        <h1><img class="img-logo" src="./assets/imagens/logo.svg"></h1>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section class="caixa-texto">
+            <textarea id="entrada" placeholder="Digite seu texto"></textarea>
+            <p class="advertencia">Apenas letras minúsculas e sem acentuação.</p>
+            <textarea id="saida" readonly></textarea>
+        </section>
+
+        <section class="botoes">
+            <button class="botao" id="botaoCriptografa">Criptografar</button>
+            <button class="botao" id="botaoDescriptografa">Descriptografar</button>
+        </section>
+        <button class="bt-copia" id="botaoCopia">Copiar</button>
+    </main>
+    <footer>
+        <p>Developed By Vinicius Bastos</p>
+        <a href="https://www.linkedin.com/in/vinicius-bastos-dev/" rel="noreferrer noopener" target="_blank">
+            <img name="linkedin"
+                src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        </a>
+        <a href="mailto:vinicius400@gmail.com">
+            <img name="email"
+                src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+        </a>
+        <a href="https://github.com/vclemente2" rel="noreferrer noopener" target="_blank">
+            <img name="github"
+                src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+        </a>
+    </footer>
 </body>
+
+<script>
+    const { codifica, decodifica, copiaTexto } = codificador;
+    const botaoCodifica = document.querySelector("#botaoCriptografa");
+    const botaoDecodifica = document.querySelector("#botaoDescriptografa");
+    const botaoCopia = document.querySelector("#botaoCopia");
+
+    botaoCodifica.onclick = codifica;
+    botaoDecodifica.onclick = decodifica;
+    botaoCopia.onclick = copiaTexto;
+</script>
 
 </html>
