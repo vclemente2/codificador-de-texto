@@ -6,7 +6,7 @@ const codificador = {
         let campoEntrada = document.querySelector("#entrada");
         let campoSaida = document.querySelector("#saida");
 
-        let texto = campoEntrada.value;
+        let texto = campoEntrada.value.toLowerCase();
         let textoCodificado = '';
 
         for (let letra of texto) {
@@ -27,7 +27,7 @@ const codificador = {
         let campoEntrada = document.querySelector("#entrada");
         let campoSaida = document.querySelector("#saida");
 
-        let texto = campoEntrada.value;
+        let texto = campoEntrada.value.toLowerCase();
         let textoDecodificado = texto;
 
         for (let i = 0; i < chaveDecodificadora.length; i++) {

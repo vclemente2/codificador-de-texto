@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="./assets/javascript/script.js"></script>
 </head>
 
 <body>
@@ -23,10 +22,10 @@
         </section>
 
         <section class="botoes">
-            <button class="botao" id="botaoCriptografa">Criptografar</button>
-            <button class="botao" id="botaoDescriptografa">Descriptografar</button>
+            <button class="botao" id="botaoCriptografa" onclick="codificador.codifica()">Criptografar</button>
+            <button class="botao" id="botaoDescriptografa" onclick="codificador.decodifica()">Descriptografar</button>
         </section>
-        <button class="bt-copia" id="botaoCopia">Copiar</button>
+        <button class="bt-copia" id="botaoCopia" onclick="codificador.copiaTexto()">Copiar</button>
     </main>
     <footer>
         <p>Developed By Vinicius Bastos</p>
@@ -43,17 +42,7 @@
                 src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
         </a>
     </footer>
+    <script src="./assets/javascript/script.js"></script>
 </body>
-
-<script>
-    const { codifica, decodifica, copiaTexto } = codificador;
-    const botaoCodifica = document.querySelector("#botaoCriptografa");
-    const botaoDecodifica = document.querySelector("#botaoDescriptografa");
-    const botaoCopia = document.querySelector("#botaoCopia");
-
-    botaoCodifica.onclick = codifica;
-    botaoDecodifica.onclick = decodifica;
-    botaoCopia.onclick = copiaTexto;
-</script>
 
 </html>
