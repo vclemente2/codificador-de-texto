@@ -40,6 +40,7 @@ const codificador = {
 
         campoSaida.value = textoDecodificado;
         campoEntrada.value = "";
+        this.ajustaCampoSaida();
     },
     copiaTexto: function () {
         let campoSaida = document.querySelector("#saida");
