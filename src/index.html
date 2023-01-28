@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Codificador de Texto</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -16,7 +16,7 @@
     </header>
     <main>
         <section class="caixa-texto">
-            <textarea id="entrada" placeholder="Digite seu texto"></textarea>
+            <textarea id="entrada" placeholder="Digite seu texto..."></textarea>
             <p class="advertencia">Apenas letras minúsculas e sem acentuação.</p>
             <textarea id="saida" readonly></textarea>
         </section>
@@ -24,23 +24,37 @@
         <section class="botoes">
             <button class="botao" id="botaoCriptografa" onclick="codificador.codifica()">Criptografar</button>
             <button class="botao" id="botaoDescriptografa" onclick="codificador.decodifica()">Descriptografar</button>
+            <button class="bt-copia" id="botaoCopia" onclick="codificador.copiaTexto()">Copiar</button>
         </section>
-        <button class="bt-copia" id="botaoCopia" onclick="codificador.copiaTexto()">Copiar</button>
+
+        <div class="background-saida">
+            <h2>Nenhuma mensagem encontrada</h2>
+            <p>Digite o texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+
     </main>
     <footer>
-        <p>Developed By Vinicius Bastos</p>
-        <a href="https://www.linkedin.com/in/vinicius-bastos-dev/" rel="noreferrer noopener" target="_blank">
-            <img name="linkedin"
-                src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
-        </a>
-        <a href="mailto:vinicius400@gmail.com">
-            <img name="email"
-                src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
-        </a>
-        <a href="https://github.com/vclemente2" rel="noreferrer noopener" target="_blank">
-            <img name="github"
-                src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
-        </a>
+        <p class="texto-rodape">Developed By Vinicius Bastos | ONE - Oracle Next Education - Alura</p>
+        <section class="icones">
+            <a href="https://www.linkedin.com/in/vinicius-bastos-dev/" rel="noreferrer noopener" target="_blank">
+                <img class="img-rodape" id="linkedin" name="linkedin"
+                    onmouseover="controladorCorIconeRodape.alteraCorOn(), controladorCorIconeRodape.alteraUrlLinkedin()"
+                    onmouseout="controladorCorIconeRodape.alteraCorOff(), controladorCorIconeRodape.alteraUrlLinkedin()"
+                    src="https://img.shields.io/badge/LinkedIn-222222?style=for-the-badge&logo=linkedin&logoColor=white">
+            </a>
+            <a href="mailto:vinicius400@gmail.com">
+                <img class="img-rodape" id="email" name="email"
+                    onmouseover="controladorCorIconeRodape.alteraCorOn(), controladorCorIconeRodape.alteraUrlEmail()"
+                    onmouseout="controladorCorIconeRodape.alteraCorOff(), controladorCorIconeRodape.alteraUrlEmail()"
+                    src="https://img.shields.io/badge/Gmail-222222?style=for-the-badge&logo=gmail&logoColor=white">
+            </a>
+            <a href="https://github.com/vclemente2" rel="noreferrer noopener" target="_blank">
+                <img class="img-rodape" id="github" name="github"
+                    onmouseover="controladorCorIconeRodape.alteraCorOn(), controladorCorIconeRodape.alteraUrlGithub()"
+                    onmouseout="controladorCorIconeRodape.alteraCorOff(), controladorCorIconeRodape.alteraUrlGithub()"
+                    src="https://img.shields.io/badge/GitHub-222222?style=for-the-badge&logo=github&logoColor=white">
+            </a>
+        </section>
     </footer>
     <script src="./assets/javascript/script.js"></script>
 </body>
