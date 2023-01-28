@@ -33,8 +33,8 @@ const codificador = {
 
         for (let i = 0; i < chaveDecodificadora.length; i++) {
             const elemento = chaveDecodificadora[i];
-            while (textoDecodificado.includes(elemento)) {
-                textoDecodificado = textoDecodificado.replace(elemento, chaveCodificadora[i]);
+            if (textoDecodificado.includes(elemento)) {
+                textoDecodificado = textoDecodificado.replaceAll(elemento, chaveCodificadora[i]);
             }
         }
 
