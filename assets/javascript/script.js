@@ -44,8 +44,18 @@ const codificador = {
     },
     copiaTexto: function () {
         let texto = document.getElementById("saida").value;
+        let botao = document.getElementById("botaoCopia");
         navigator.clipboard.writeText(texto);
-        alert("Texto copiado.");
+        botao.textContent = "Copiado";
+        botao.style.background = "#0A3871";
+        botao.style.color = "#D8DFE8";
+        botao.style.opacity = "none";
+        setTimeout(() => {
+            botao.textContent = "Copiar";
+            botao.style.background = "#D8DFE8";
+            botao.style.color = "#0A3871";
+            botao.style.hover.opacity = "0.6";
+        }, 5000)
     },
     ajustaCampoSaida: function () {
         const campoSaida = document.querySelector("#saida");
