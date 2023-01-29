@@ -182,3 +182,86 @@ footer {
     height: 25px;
     border-radius: 5px;
 }
+
+@media screen and (max-width:760px) {
+
+    header,
+    main,
+    footer {
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    .caixa-texto {
+        position: relative;
+        margin: 0 auto;
+        width: 350px;
+        height: auto;
+    }
+
+    .caixa-texto p {
+        position: relative;
+        line-height: 1.5em;
+        font-size: 14px;
+    }
+
+    #entrada,
+    #saida {
+        position: relative;
+        display: block;
+        width: 340px;
+        margin: 0 auto;
+        padding: 0;
+        top: 0;
+        text-align: center;
+        background-position: center 2em;
+    }
+
+    #entrada {
+        height: 250px;
+    }
+
+    .background-saida {
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        width: 350px;
+        bottom: 120px;
+        right: auto;
+    }
+
+    .caixa-bt-copia {
+        position: absolute;
+        width: 350px;
+        bottom: 40px;
+    }
+
+    .bt-copia {
+        position: relative;
+        width: 30%;
+        margin: 0 auto;
+        padding: 0.5em 1em;
+        right: auto;
+        text-align: center;
+    }
+
+    .advertencia {
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    .botoes {
+        position: relative;
+        display: block;
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    .botao {
+        position: relative;
+        display: block;
+        width: 80%;
+        margin: .5em auto;
+    }
+
+}

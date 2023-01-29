@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador de Texto</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -17,20 +17,20 @@
     <main>
         <section class="caixa-texto">
             <textarea id="entrada" placeholder="Digite seu texto..."></textarea>
-            <p class="advertencia">Apenas letras minúsculas e sem acentuação.</p>
             <textarea id="saida" readonly></textarea>
+            <div class="background-saida">
+                <h2>Nenhuma mensagem encontrada</h2>
+                <p>Digite o texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="caixa-bt-copia"><button class="bt-copia" id="botaoCopia"
+                    onclick="codificador.copiaTexto()">Copiar</button></div>
+            <p class="advertencia">Apenas letras minúsculas e sem acentuação.</p>
         </section>
 
         <section class="botoes">
             <button class="botao" id="botaoCriptografa" onclick="codificador.codifica()">Criptografar</button>
             <button class="botao" id="botaoDescriptografa" onclick="codificador.decodifica()">Descriptografar</button>
-            <button class="bt-copia" id="botaoCopia" onclick="codificador.copiaTexto()">Copiar</button>
         </section>
-
-        <div class="background-saida">
-            <h2>Nenhuma mensagem encontrada</h2>
-            <p>Digite o texto que você deseja criptografar ou descriptografar.</p>
-        </div>
 
     </main>
     <footer>
