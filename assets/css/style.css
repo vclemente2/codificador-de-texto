@@ -211,7 +211,7 @@ footer {
         display: block;
         width: 340px;
         margin: 0 auto;
-        padding: .5em;
+        padding: .5em 0;
         top: 0;
         text-align: center;
         background-position: center 2em;
