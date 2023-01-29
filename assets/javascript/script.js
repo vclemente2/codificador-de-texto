@@ -45,7 +45,7 @@ const codificador = {
     copiaTexto: function () {
         let texto = document.getElementById("saida").value;
         navigator.clipboard.writeText(texto);
-        // alert("Texto copiado.");
+        alert("Texto copiado.");
     },
     ajustaCampoSaida: function () {
         const campoSaida = document.querySelector("#saida");
