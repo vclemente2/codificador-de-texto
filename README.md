@@ -27,4 +27,4 @@ Este projeto tem como objetivo criar uma aplicação que criptografa e descripto
     "gaitober" => "gato"
     
     
-Página publicada no GitHub Pages através do link: [https://vclemente2.github.io/desenvolve-fullstack/](https://vclemente2.github.io/codificador-de-texto/)
+Página publicada no GitHub Pages através do link: https://vclemente2.github.io/codificador-de-texto/
